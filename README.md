@@ -25,4 +25,3 @@ ______
 - `RL_PRDQN.py`: represents the Deep Q network with the priority experience replay
 - `main.py`: task offloading main function with fault tolerance
 - `sysMpdel.py`:Includes task generation, user movement, edge server resources, edge server fault recovery.
-- 
