@@ -11,10 +11,11 @@ _____
 # launch
 ____
 The startup program simply runs the main function directly, then adjusts the number of edge servers and users in the participating environment by changing the global variable parameters,such as simulation time `simeTime`, the processing speed of edge server `rho`,  Edge server cache pool `buffer`, the cache pool indicates that the server reads unloaded tasks from the queue pool. The implement of offloading algorithm by changing different `name` in Offloading_Strategy.py file.
+The simulation has two parts, one is `Simulation_NONRL` without reinforcement learning, and the other is `Simulation_RL` with reinforcement learning.The fault module uses SimPy discrete event simulation to represent the interruption of the edge server. When the server resources fail instantaneously, an interval of event recovery occurs. After recovery, priority is given to the tasks performed before the interruption.
 
 # Code structure
 ______
-- `./dataset` :contains edgeResources-melbCBD.csv and users-melbdbd-generated.csv files.from [EUA datasets](https://github.com/PhuLai/eua-dataset).
+- `./dataset` :contains edgeResources-melbCBD.csv and users-melbdbd-generated.csv files from [EUA datasets](https://github.com/PhuLai/eua-dataset).
 - `./results`: Dueling DQN algorithm results
 - `./userName`: Recording the results of different reinforcement learning algorithms on different edge servers with different users
 - `./usermove`: Recording the latitude and longitude of random movements of users
